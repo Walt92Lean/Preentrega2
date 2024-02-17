@@ -1,0 +1,359 @@
+/* main */
+/* hero */
+
+
+.fv__hero{
+    background-image: url('../assets/images/Fondo\ AmarilloNegro.avif');
+    background-size: cover;
+    width: 80%;
+    height: 1024px;
+    @include flex(column, center, center, 15px);
+
+    &__content{
+      @include flex (column, center, center,20px);
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    &__content h1{
+      background-color: #a20a0a;
+        border-radius: 10px;
+        opacity: .9;
+        text-align: center;
+        font-size: 120px;
+        font-family: 'Proza Libre',sans-serif;
+        color:white;
+        padding: 20px;
+    }
+    
+    
+    @media (max-width: 1024px) {
+        &__content h1 {
+            font-size: 80px;
+            }
+          }
+    @media (max-width: 768px) {
+        &__content h1 {
+            font-size: 60px;
+            }
+          }
+    &__content a{
+        font-family: 'Proza Libre',sans-serif;
+        background-color: #e7deb9;
+        color: black;
+        text-decoration: none;
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-align: center;
+        min-width: 300px;
+        max-width: 50%;
+    }
+    
+    @media (max-width: 768px) {
+        &__content a {
+            font-size: 18px;
+            }
+          }
+    
+    
+    
+    &__content p{
+        background-color:transparent;
+        border-color: black;
+        border-radius: 10px;
+        opacity: .9;
+        font-size: 40px;
+        font-family: 'Proza Libre',sans-serif;
+        color: black;
+        text-align: center;
+    }
+    
+    @media (max-width: 1024px) {
+        &__content p {
+            font-size: 24px;
+            }
+          }
+    @media (max-width: 768px) {
+        &__content p {
+            font-size: 18px;
+            }
+          }
+    
+    .btn-warning {
+        font-size: 24px;
+        width: 200px;
+    }
+    
+    .btn-warning:hover{
+        background-color: #a20a0a;
+        color: white;
+        border-color: black;
+        @include btn(0.3s, scale(1.3))
+    }
+    
+    .btn-check:checked+.btn,
+    .btn.active,
+    .btn.show,
+    .btn:first-child:active,
+    :not(.btn-check)+.btn:active {
+      background-color: #e7deb9;
+      color: black;
+      border-color: black;
+    }
+  
+    
+}
+@media (max-width: 1024px) {
+    .hero{
+      height: 100%;
+    }
+
+}
+
+/* products */
+
+.fv__carousel__products{
+
+  &__title{
+      font-size: 120px;
+      color: black;
+      font-family: 'Proza Libre',sans-serif;
+      text-align: center;
+      margin-top: 50px;  
+    }
+    
+    @media (max-width: 1024px) {
+      &__title{
+          font-size: 80px;
+          }
+        }
+    @media (max-width: 768px) {
+      &__title{
+          font-size: 60px;
+          }
+        }
+    
+  
+}
+
+.carousel-item{
+  width: 100%;
+  height: 500px;
+}
+
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.carousel-title{
+    display: inline-block;
+    background-color: grey;
+    width: 50%;
+    border-radius: 10px;
+    font-size: 40px;
+    font-family: 'Proza Libre',sans-serif;
+    color: rgb(240, 217, 14);
+    text-align: center;
+  }
+
+.carousel-content{
+    background-color: grey;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Proza Libre',sans-serif;
+    color: black;
+    text-align: center;
+  }
+
+
+/* services */
+.fv__services {
+    @include flex(column, center, center,10px);
+    text-align: center;
+
+    @media (max-width: 1024px) {
+      .fv__services {
+        padding: 10px;
+      }
+    }
+
+    &__title {
+      font-size: 120px;
+      color: black;
+      font-family: 'Proza Libre',sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    @media (max-width: 1024px) {
+      &__title {
+        font-size: 80px;
+      }
+    }
+    @media (max-width: 768px) {
+      &__title {
+        font-size: 60px;
+      }
+    }
+  
+    &__content {
+      position: relative;
+      display: flex;
+      width: 80%;
+
+      &__img {
+        position: relative;
+        width: 40%;
+
+        &__number {
+          font-weight: bold;
+          font-size: 200px;
+          background-color: black;
+          color: #f4b900;
+          position: absolute;
+          top: 0;
+          opacity: 0.6;
+          width: 100%;
+          height: 100%;
+          text-align: end;
+        }
+        
+        @media (max-width: 1024px) {
+          &__number {
+            font-size: 80px;
+          }
+        }
+        @media (max-width: 768px) {
+          &__number {
+            font-size: 60px;
+          }
+        }
+      }
+      &__img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &__info {
+        padding: 10px;
+        background-color: #f4b900;
+        color: black;
+        font-size: 40px;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__btn{
+          border-bottom: 2px solid black;
+        }
+        &__btn:hover {
+          border-color: transparent;
+        }
+
+        &__title {
+          font-size: 80px;
+          color: white;
+          font-family: 'Proza Libre',sans-serif;
+          margin-top: 50px;
+        }
+        @media (max-width: 1024px) {
+          &__title {
+            font-size: 40px;
+            text-align: center;
+          }
+        }
+        @media (max-width: 768px) {
+          &__title {
+            font-size: 24px;
+            text-align: center;
+          }
+        }
+      }
+      @media (max-width: 1024px) {
+        &__info {
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+      @media (max-width: 768px) {
+        &__info {
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  
+  
+  
+  
+  /* contact */
+  .fv__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 400px;
+
+    &__content {
+      width: 80%;
+
+      &__title {
+        font-size: 120px;
+        font-family: 'Proza Libre',sans-serif;    
+        margin-bottom: 120px;
+        color: #a20a0a;
+      }
+      @media (max-width: 1024px) {
+        &__title {
+          font-size: 80px;
+        }
+      }
+      @media (max-width: 768px) {
+        &__title {
+          font-size: 60px;
+        }
+      }
+    }
+
+    &__content p {
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 50px;
+      color: #a20a0a;
+    }
+    @media (max-width: 1024px) {
+      &__content p {
+        font-size: 25px;
+        line-height: 35px;
+      }
+    }
+    @media (max-width: 768px) {
+      &__content p {
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+    &__content a {
+      display: inline-block;
+      border-bottom: 2px solid black;
+    }
+    &__content a:hover {
+      border-color: transparent;
+    }
+  }
+  
+  
+  
+
+  
