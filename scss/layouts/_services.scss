@@ -6,59 +6,64 @@
     margin-top: 20px;
     display: grid;
     height: 100%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-      'a1 a1 a1'
-      'a2 a2 a3';
+      'a0  a2 a2 a2 a2 a2 a2 a2 a2 a3'
+      'a0  a4 a4 a4 a4 a5 a5 a5 a5 a3';
     gap: 20px;
-  
-  }
-  
-  
-  
-  .gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    align-items: center;
-  }
-  
-  .Asesoramiento {
-    grid-area: a1;
-  }
-  
-  .Construccion {
-    grid-area: a3;
-  }
-  
-  .Documentacion {
-    grid-area: a2
-  }
-  
-  .Asesoramiento h2, .Documentacion h2,.Construccion h2{
-    background-color: #a20a0a;
-    border-radius: 10px;
-    position: absolute;
-    font-family: 'Proza Libre',sans-serif;
-    font-size: 60px;
-  }
-  
-  @media (max-width:1024px){
-    .Asesoramiento h2, .Documentacion h2,.Construccion h2{
-      font-size: 40px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      align-items: center;
     }
-    .gallery{
-      @include flex(column, center, center, 15px);
+
+    h2 {
+      background-color: #a20a0a;
+      border-radius: 10px;
+      position: absolute;
+      font-family: 'Proza Libre',sans-serif;
+      font-size: 60px;
+
     }
-  }
+
+    &__Asesoramiento {
+      grid-area: a2;
+    }
+    
+    &__Construccion {
+      grid-area: a4;
+    }
+    
+    &__Documentacion {
+      grid-area: a5
+    }
+
+    @media (max-width:1240px){
+      &__Asesoramiento h2, &__Documentacion h2,&__Construccion h2{
+        font-size: 40px;
+      }
+
+    @include flex(column, center, center, 15px);
+    }
+    
+    @media (max-width:768px){
+      &__Asesoramiento h2, &__Documentacion h2,&__Construccion h2{
+        font-size: 24px;
+      }
+    @include flex(column, center, center, 10px);
+    }
+
   
-  @media (max-width:768px){
-    .Asesoramiento h2, .Documentacion h2,.Construccion h2{
-      font-size: 24px;
-    }
-    .gallery{
-      @include flex(column, center, center, 10px);
-    }
   }
+
+  
+  
+  
+  
+  
+  
   

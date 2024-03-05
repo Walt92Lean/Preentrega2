@@ -117,19 +117,21 @@ a {
   border-radius: 10px;
   opacity: 0.9;
   text-align: center;
-  font-size: 120px;
+  font-size: 100px;
   font-family: "Proza Libre", sans-serif;
   color: white;
   padding: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1480px) {
   .fv__hero__content h1 {
-    font-size: 80px;
+    font-size: 60px;
+    padding: 20px;
   }
 }
 @media (max-width: 768px) {
   .fv__hero__content h1 {
-    font-size: 60px;
+    font-size: 40px;
+    padding: 0;
   }
 }
 .fv__hero__content a {
@@ -149,24 +151,36 @@ a {
     font-size: 18px;
   }
 }
-.fv__hero__content p {
+.fv__hero__content__p1 {
+  background-color: transparent;
+  border-color: black;
+  border-radius: 10px;
+  opacity: 0.9;
+  font-size: 36px;
+  font-family: "Proza Libre", sans-serif;
+  color: black;
+  text-align: center;
+}
+.fv__hero__content__p2 {
   background-color: transparent;
   border-color: black;
   border-radius: 10px;
   opacity: 0.9;
   font-size: 40px;
   font-family: "Proza Libre", sans-serif;
-  color: black;
+  color: white;
   text-align: center;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1480px) {
   .fv__hero__content p {
     font-size: 24px;
+    color: white;
   }
 }
 @media (max-width: 768px) {
   .fv__hero__content p {
     font-size: 18px;
+    color: white;
   }
 }
 .fv__hero .btn-warning {
@@ -273,7 +287,7 @@ a {
 }
 @media (max-width: 768px) {
   .fv__services__title {
-    font-size: 60px;
+    font-size: 24px;
   }
 }
 .fv__services__content {
@@ -334,9 +348,9 @@ a {
   font-family: "Proza Libre", sans-serif;
   margin-top: 50px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1480px) {
   .fv__services__content__info__title {
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
   }
 }
@@ -499,11 +513,11 @@ a {
   margin-top: 20px;
   display: grid;
   height: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "a1 a1 a1" "a2 a2 a3";
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "a0  a2 a2 a2 a2 a2 a2 a2 a2 a3" "a0  a4 a4 a4 a4 a5 a5 a5 a5 a3";
   gap: 20px;
 }
-
 .gallery img {
   width: 100%;
   height: 100%;
@@ -511,31 +525,23 @@ a {
   border-radius: 10px;
   align-items: center;
 }
-
-.Asesoramiento {
-  grid-area: a1;
-}
-
-.Construccion {
-  grid-area: a3;
-}
-
-.Documentacion {
-  grid-area: a2;
-}
-
-.Asesoramiento h2, .Documentacion h2, .Construccion h2 {
+.gallery h2 {
   background-color: #a20a0a;
   border-radius: 10px;
   position: absolute;
   font-family: "Proza Libre", sans-serif;
   font-size: 60px;
 }
-
-@media (max-width: 1024px) {
-  .Asesoramiento h2, .Documentacion h2, .Construccion h2 {
-    font-size: 40px;
-  }
+.gallery__Asesoramiento {
+  grid-area: a2;
+}
+.gallery__Construccion {
+  grid-area: a4;
+}
+.gallery__Documentacion {
+  grid-area: a5;
+}
+@media (max-width: 1240px) {
   .gallery {
     display: flex;
     flex-direction: column;
@@ -543,11 +549,11 @@ a {
     align-items: center;
     gap: 15px;
   }
+  .gallery__Asesoramiento h2, .gallery__Documentacion h2, .gallery__Construccion h2 {
+    font-size: 40px;
+  }
 }
 @media (max-width: 768px) {
-  .Asesoramiento h2, .Documentacion h2, .Construccion h2 {
-    font-size: 24px;
-  }
   .gallery {
     display: flex;
     flex-direction: column;
@@ -555,9 +561,13 @@ a {
     align-items: center;
     gap: 10px;
   }
+  .gallery__Asesoramiento h2, .gallery__Documentacion h2, .gallery__Construccion h2 {
+    font-size: 24px;
+  }
 }
+
 /* Team.html */
-.card-team {
+.card__team {
   width: 500px;
   height: 500px;
   border-radius: 10px;
@@ -566,22 +576,19 @@ a {
   transition: 0.4s;
   overflow: hidden;
 }
-
-.card-img-top-team {
+.card__team:hover {
+  background-color: #f4b900;
+  color: #111;
+  box-shadow: 3px 3px 3px #111;
+}
+.card__team__img-top-team {
   width: 100%;
   height: 70%;
   object-fit: cover;
   border-radius: 10px;
   transition: 0.4s;
 }
-
-.card-team:hover {
-  background-color: #f4b900;
-  color: #111;
-  box-shadow: 3px 3px 3px #111;
-}
-
-.card-title, .card-text {
+.card__team__body {
   text-align: center;
 }
 
